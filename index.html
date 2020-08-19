@@ -4,13 +4,14 @@
     function image(img, location) {
         document.getElementById(location).src = img.src
     }
+
     function color(location) {
-        if (location === 'win1'){
-            document.getElementById('win1').style.backgroundColor = "#ffd700"
-            document.getElementById('win2').style.backgroundColor = ""
+        if (location === 'nfw') {
+            document.getElementById('nfw').style.backgroundColor = "#ffd700"
+            document.getElementById('nfe').style.backgroundColor = ""
         } else {
-            document.getElementById('win2').style.backgroundColor = "#ffd700"
-            document.getElementById('win1').style.backgroundColor = ""
+            document.getElementById('nfe').style.backgroundColor = "#ffd700"
+            document.getElementById('nfw').style.backgroundColor = ""
         }
     }
 </script>
@@ -19,6 +20,135 @@
         border-left: 6px solid green;
         height: 200px;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 1px 1px;
+        align-items: center;
+        grid-template-areas: "W1 WQ1 WS1 . ES1 EQ1 E1" "W8 WQ1 WS1 . ES1 EQ1 E8" "W4 WQ2 WS1 . ES1 EQ2 E4" "W5 WQ2 WS1 NFW ES1 EQ2 E5" "W3 WQ3 WS2 NFE ES2 EQ3 E3" "W6 WQ3 WS2 . ES2 EQ3 E6" "W2 WQ4 WS2 . ES2 EQ4 E2" "W7 WQ4 WS2 . ES2 EQ4 E7";
+    }
+
+    .W1 {
+        grid-area: W1;
+    }
+
+    .W8 {
+        grid-area: W8;
+    }
+
+    .W4 {
+        grid-area: W4;
+    }
+
+    .W5 {
+        grid-area: W5;
+    }
+
+    .W3 {
+        grid-area: W3;
+    }
+
+    .W6 {
+        grid-area: W6;
+    }
+
+    .W2 {
+        grid-area: W2;
+    }
+
+    .W7 {
+        grid-area: W7;
+    }
+
+    .WQ1 {
+        grid-area: WQ1;
+    }
+
+    .WQ2 {
+        grid-area: WQ2;
+    }
+
+    .WQ3 {
+        grid-area: WQ3;
+    }
+
+    .WQ4 {
+        grid-area: WQ4;
+    }
+
+    .WS1 {
+        grid-area: WS1;
+    }
+
+    .WS2 {
+        grid-area: WS2;
+    }
+
+    .NFW {
+        grid-area: NFW;
+    }
+
+    .NFE {
+        grid-area: NFE;
+    }
+
+    .ES1 {
+        grid-area: ES1;
+    }
+
+    .ES2 {
+        grid-area: ES2;
+    }
+
+    .EQ1 {
+        grid-area: EQ1;
+    }
+
+    .EQ2 {
+        grid-area: EQ2;
+    }
+
+    .EQ3 {
+        grid-area: EQ3;
+    }
+
+    .EQ4 {
+        grid-area: EQ4;
+    }
+
+    .E1 {
+        grid-area: E1;
+    }
+
+    .E8 {
+        grid-area: E8;
+    }
+
+    .E4 {
+        grid-area: E4;
+    }
+
+    .E5 {
+        grid-area: E5;
+    }
+
+    .E3 {
+        grid-area: E3;
+    }
+
+    .E6 {
+        grid-area: E6;
+    }
+
+    .E2 {
+        grid-area: E2;
+    }
+
+    .E7 {
+        grid-area: E7;
+    }
 </style>
 <head>
     <meta charset="UTF-8">
@@ -26,169 +156,93 @@
 </head>
 <body>
 <h1 align="center">
-    Pick your NBA playoff bracket!
+    Pick your NBA playoff bracket! Click on the team you think will win!
 </h1>
-<table align="center" frame="below">
-    <h2 align="center">
-        WEST
-    </h2>
-    <TR>
-        <td>
-            <img src="assets/teams/west/1LAL.svg" role="button" onclick="image(this,'wq1')">
-        </td>
-        <td>
-            <img src="assets/teams/west/8POR.svg" role="button" onclick="image(this,'wq1')">
-        </td>
-        <td>
-            <div class="vl"></div>
-        </td>
-        <td>
-            <img src="assets/teams/west/4HOU.svg" role="button" onclick="image(this,'wq2')">
-        </td>
-        <td>
-            <img src="assets/teams/west/5OKC.svg" role="button" onclick="image(this,'wq2')">
-        </td>
-        <td>
-            <div class="vl"></div>
-        </td>
-        <td>
-            <img src="assets/teams/west/2LAC.svg" role="button" onclick="image(this,'wq3')">
-        </td>
-        <td>
-            <img src="assets/teams/west/7DAL.svg" role="button" onclick="image(this,'wq3')">
-        </td>
-        <td>
-            <div class="vl"></div>
-        </td>
-        <td>
-            <img src="assets/teams/west/3DEN.svg" role="button" onclick="image(this,'wq4')">
-        </td>
-        <td>
-            <img src="assets/teams/west/6UTA.svg" role="button" onclick="image(this,'wq4')">
-        </td>
-    </TR>
-    <tr>
-        <table align="center" frame="below">
-            <tr>
-                <td>
-                    <img id="wq1" src="" role="button" onclick="image(this,'ws1')">
-                </td>
-                <td>
-                    <img id="wq2" src="" role="button" onclick="image(this,'ws1')">
-                </td>
-                <td>
-                    <div class="vl"></div>
-                </td>
-                <td>
-                    <img id="wq3" src="" role="button" onclick="image(this,'ws2')">
-                </td>
-                <td>
-                    <img id="wq4" src="" role="button" onclick="image(this,'ws2')">
-                </td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table align="center" frame="below">
-            <tr>
-                <td>
-                    <img id="ws1" src="" role="button" onclick="image(this,'nfw')">
-                </td>
-                <td>
-                    <img id="ws2" src="" role="button" onclick="image(this,'nfw')">
-                </td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table align="center">
-            <tr>
-                <td id="win1" >
-                    <img id="nfw" src="" role="button" onclick="color('win1')">
-                </td>
-                <td id="win2" >
-                    <img id="nfe" src="" role="button" onclick="color('win2')">
-                </td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table align="center" frame="above">
-            <tr>
-                <td>
-                    <img id="es1" src="" role="button" onclick="image(this,'nfe')">
-                </td>
-                <td>
-                    <img id="es2" src="" role="button" onclick="image(this,'nfe')">
-                </td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table align="center" frame="above">
-            <tr>
-                <td>
-                    <img id="eq1" src="" role="button" onclick="image(this,'es1')">
-                </td>
-                <td>
-                    <img id="eq2" src="" role="button" onclick="image(this,'es1')">
-                </td>
-                <td>
-                    <div class="vl"></div>
-                </td>
-                <td>
-                    <img id="eq3" src="" role="button" onclick="image(this,'es2')">
-                </td>
-                <td>
-                    <img id="eq4" src="" role="button" onclick="image(this,'es2')">
-                </td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
+<h2 align="left">
+    WEST
+</h2>
+<h2 align="right">
+    EAST
+</h2>
+<div class="grid-container">
+    <div class="W1">
+        <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/1LAL.svg">
+    </div>
+    <div class="W8">
+        <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/8POR.svg">
+    </div>
+    <div class="W4">
+        <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/4HOU.svg">
+    </div>
+    <div class="W5">
+        <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/5OKC.svg">
+    </div>
+    <div class="W3">
+        <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/3DEN.svg">
+    </div>
+    <div class="W6">
+        <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/6UTA.svg">
+    </div>
+    <div class="W2">
+        <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/2LAC.svg">
+    </div>
+    <div class="W7">
+        <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/7DAL.svg">
+    </div>
+    <div class="WQ1"><img id="wq1" onclick="image(this,'ws1')" role="button" src="">
+    </div>
+    <div class="WQ2"><img id="wq2" onclick="image(this,'ws1')" role="button" src="">
+    </div>
+    <div class="WQ3"><img id="wq3" onclick="image(this,'ws2')" role="button" src="">
+    </div>
+    <div class="WQ4"><img id="wq4" onclick="image(this,'ws2')" role="button" src="">
+    </div>
+    <div class="WS1"><img id="ws1" onclick="image(this,'nfw')" role="button" src="">
+    </div>
+    <div class="WS2"><img id="ws2" onclick="image(this,'nfw')" role="button" src="">
+    </div>
+    <div class="NFW"><img id="nfw" onclick="color('nfw')" role="button" src="">
+    </div>
+    <div class="NFE"><img id="nfe" onclick="color('nfe')" role="button" src="">
+    </div>
+    <div class="ES1"><img id="es1" onclick="image(this,'nfe')" role="button" src="">
+    </div>
+    <div class="ES2"><img id="es2" onclick="image(this,'nfe')" role="button" src="">
+    </div>
+    <div class="EQ1"><img id="eq1" onclick="image(this,'es1')" role="button" src="">
+    </div>
+    <div class="EQ2"><img id="eq2" onclick="image(this,'es1')" role="button" src="">
+    </div>
+    <div class="EQ3"><img id="eq3" onclick="image(this,'es2')" role="button" src="">
+    </div>
+    <div class="EQ4"><img id="eq4" onclick="image(this,'es2')" role="button" src="">
+    </div>
+    <div class="E1">
+        <img onclick="image(this,'eq1')" role="button" src="assets/teams/east/1MIL.svg">
+    </div>
+    <div class="E8">
+        <img onclick="image(this,'eq1')" role="button" src="assets/teams/east/8ORL.svg">
+    </div>
+    <div class="E4">
+        <img onclick="image(this,'eq2')" role="button" src="assets/teams/east/4IND.svg">
+    </div>
+    <div class="E5">
+        <img onclick="image(this,'eq2')" role="button" src="assets/teams/east/5MIA.svg">
+    </div>
+    <div class="E3">
+        <img onclick="image(this,'eq3')" role="button" src="assets/teams/east/3BOS.svg">
+    </div>
+    <div class="E6">
+        <img onclick="image(this,'eq3')" role="button" src="assets/teams/east/6PHI.svg">
+    </div>
+    <div class="E2">
+        <img onclick="image(this,'eq4')" role="button" src="assets/teams/east/2TOR.svg">
+    </div>
+    <div class="E7">
+        <img onclick="image(this,'eq4')" role="button" src="assets/teams/east/7BKN.svg">
+    </div>
+</div>
 
-        <table align="center" frame="above">
-            <tr>
-        <td>
-            <img src="assets/teams/east/1MIL.svg" role="button" onclick="image(this,'eq1')">
-        </td>
-        <td>
-            <img src="assets/teams/east/8ORL.svg" role="button" onclick="image(this,'eq1')">
-        </td>
-        <td>
-            <div class="vl"></div>
-        </td>
-        <td>
-            <img src="assets/teams/east/4IND.svg" role="button" onclick="image(this,'eq2')">
-        </td>
-        <td>
-            <img src="assets/teams/east/5MIA.svg" role="button" onclick="image(this,'eq2')">
-        </td>
-                <td>
-                    <div class="vl"></div>
-                </td>
-        <td>
-            <img src="assets/teams/east/2TOR.svg" role="button" onclick="image(this,'eq3')">
-        </td>
-        <td>
-            <img src="assets/teams/east/7BKN.svg" role="button" onclick="image(this,'eq3')">
-        </td>
-                <td>
-                    <div class="vl"></div>
-                </td>
-        <td>
-            <img src="assets/teams/east/3BOS.svg" role="button" onclick="image(this,'eq4')">
-        </td>
-        <td>
-            <img src="assets/teams/east/6PHI.svg" role="button" onclick="image(this,'eq4')">
-        </td>
-            </tr>
-        </table>
-        <h2 align="center">
-            EAST
-        </h2>
-    </tr>
-</table>
 </body>
 
 </html>
