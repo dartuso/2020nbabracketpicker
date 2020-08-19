@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+    function image(img, location) {
+        document.getElementById(location).src = img.src
+    }
+    function color(location) {
+        if (location === 'win1'){
+            document.getElementById('win1').style.backgroundColor = "#ffd700"
+            document.getElementById('win2').style.backgroundColor = ""
+        } else {
+            document.getElementById('win2').style.backgroundColor = "#ffd700"
+            document.getElementById('win1').style.backgroundColor = ""
+        }
+    }
+</script>
+<style>
+    .vl {
+        border-left: 6px solid green;
+        height: 200px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Bracket</title>
+</head>
+<body>
+<h1 align="center">
+    Pick your NBA playoff bracket!
+</h1>
+<table align="center" frame="below">
+    <h2 align="center">
+        WEST
+    </h2>
+    <TR>
+        <td>
+            <img src="assets/teams/west/1LAL.svg" role="button" onclick="image(this,'wq1')">
+        </td>
+        <td>
+            <img src="assets/teams/west/8POR.svg" role="button" onclick="image(this,'wq1')">
+        </td>
+        <td>
+            <div class="vl"></div>
+        </td>
+        <td>
+            <img src="assets/teams/west/4HOU.svg" role="button" onclick="image(this,'wq2')">
+        </td>
+        <td>
+            <img src="assets/teams/west/5OKC.svg" role="button" onclick="image(this,'wq2')">
+        </td>
+        <td>
+            <div class="vl"></div>
+        </td>
+        <td>
+            <img src="assets/teams/west/2LAC.svg" role="button" onclick="image(this,'wq3')">
+        </td>
+        <td>
+            <img src="assets/teams/west/7DAL.svg" role="button" onclick="image(this,'wq3')">
+        </td>
+        <td>
+            <div class="vl"></div>
+        </td>
+        <td>
+            <img src="assets/teams/west/3DEN.svg" role="button" onclick="image(this,'wq4')">
+        </td>
+        <td>
+            <img src="assets/teams/west/6UTA.svg" role="button" onclick="image(this,'wq4')">
+        </td>
+    </TR>
+    <tr>
+        <table align="center" frame="below">
+            <tr>
+                <td>
+                    <img id="wq1" src="" role="button" onclick="image(this,'ws1')">
+                </td>
+                <td>
+                    <img id="wq2" src="" role="button" onclick="image(this,'ws1')">
+                </td>
+                <td>
+                    <div class="vl"></div>
+                </td>
+                <td>
+                    <img id="wq3" src="" role="button" onclick="image(this,'ws2')">
+                </td>
+                <td>
+                    <img id="wq4" src="" role="button" onclick="image(this,'ws2')">
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center" frame="below">
+            <tr>
+                <td>
+                    <img id="ws1" src="" role="button" onclick="image(this,'nfw')">
+                </td>
+                <td>
+                    <img id="ws2" src="" role="button" onclick="image(this,'nfw')">
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center">
+            <tr>
+                <td id="win1" >
+                    <img id="nfw" src="" role="button" onclick="color('win1')">
+                </td>
+                <td id="win2" >
+                    <img id="nfe" src="" role="button" onclick="color('win2')">
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center" frame="above">
+            <tr>
+                <td>
+                    <img id="es1" src="" role="button" onclick="image(this,'nfe')">
+                </td>
+                <td>
+                    <img id="es2" src="" role="button" onclick="image(this,'nfe')">
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center" frame="above">
+            <tr>
+                <td>
+                    <img id="eq1" src="" role="button" onclick="image(this,'es1')">
+                </td>
+                <td>
+                    <img id="eq2" src="" role="button" onclick="image(this,'es1')">
+                </td>
+                <td>
+                    <div class="vl"></div>
+                </td>
+                <td>
+                    <img id="eq3" src="" role="button" onclick="image(this,'es2')">
+                </td>
+                <td>
+                    <img id="eq4" src="" role="button" onclick="image(this,'es2')">
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+
+        <table align="center" frame="above">
+            <tr>
+        <td>
+            <img src="assets/teams/east/1MIL.svg" role="button" onclick="image(this,'eq1')">
+        </td>
+        <td>
+            <img src="assets/teams/east/8ORL.svg" role="button" onclick="image(this,'eq1')">
+        </td>
+        <td>
+            <div class="vl"></div>
+        </td>
+        <td>
+            <img src="assets/teams/east/4IND.svg" role="button" onclick="image(this,'eq2')">
+        </td>
+        <td>
+            <img src="assets/teams/east/5MIA.svg" role="button" onclick="image(this,'eq2')">
+        </td>
+                <td>
+                    <div class="vl"></div>
+                </td>
+        <td>
+            <img src="assets/teams/east/2TOR.svg" role="button" onclick="image(this,'eq3')">
+        </td>
+        <td>
+            <img src="assets/teams/east/7BKN.svg" role="button" onclick="image(this,'eq3')">
+        </td>
+                <td>
+                    <div class="vl"></div>
+                </td>
+        <td>
+            <img src="assets/teams/east/3BOS.svg" role="button" onclick="image(this,'eq4')">
+        </td>
+        <td>
+            <img src="assets/teams/east/6PHI.svg" role="button" onclick="image(this,'eq4')">
+        </td>
+            </tr>
+        </table>
+        <h2 align="center">
+            EAST
+        </h2>
+    </tr>
+</table>
+</body>
+
+</html>
