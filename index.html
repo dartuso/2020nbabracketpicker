@@ -16,134 +16,339 @@
     }
 </script>
 <style>
-
+    /*
+        https://grid.layoutit.com/?id=beHcdH0
+    */
     .grid-container {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(8, 1fr);
         gap: 1px 1px;
         align-items: center;
-        grid-template-areas: "W1 WQ1 WS1 . ES1 EQ1 E1" "W8 WQ1 WS1 . ES1 EQ1 E8" "W4 WQ2 WS1 . ES1 EQ2 E4" "W5 WQ2 WS1 NFW ES1 EQ2 E5" "W3 WQ3 WS2 NFE ES2 EQ3 E3" "W6 WQ3 WS2 . ES2 EQ3 E6" "W2 WQ4 WS2 . ES2 EQ4 E2" "W7 WQ4 WS2 . ES2 EQ4 E7";
+        grid-template-areas: "WEST WEST WEST . EAST EAST EAST" "WM1 . . . . . EM1" ". WQ1 . . . EQ1 ." "WM2 . WCF FINAL ECF . EM2" ". . WCF FINAL ECF . ." "WM3 . WCF FINAL ECF . EM3" ". WQ2 . . . EQ2 ." "WM4 . . . . . EM4";
     }
 
-    .W1 {
-        grid-area: W1;
+    .WEST {
+        grid-area: WEST;
     }
 
-    .W8 {
-        grid-area: W8;
+    .EAST {
+        grid-area: EAST;
     }
 
-    .W4 {
-        grid-area: W4;
+    .WM1 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WMS1 VS WMS8";
+        grid-area: WM1;
     }
 
-    .W5 {
-        grid-area: W5;
+    .WMS1 {
+        grid-area: WMS1;
     }
 
-    .W3 {
-        grid-area: W3;
+    .WMS8 {
+        grid-area: WMS8;
     }
 
-    .W6 {
-        grid-area: W6;
+    .VS {
+        grid-area: VS;
     }
 
-    .W2 {
-        grid-area: W2;
+    .WM2 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WMS4 VS WMS5";
+        grid-area: WM2;
     }
 
-    .W7 {
-        grid-area: W7;
+    .WMS4 {
+        grid-area: WMS4;
+    }
+
+    .WMS5 {
+        grid-area: WMS5;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .WM3 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WMS3 VS WMS6";
+        grid-area: WM3;
+    }
+
+    .WMS3 {
+        grid-area: WMS3;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .WMS6 {
+        grid-area: WMS6;
+    }
+
+    .WM4 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WMS2 VS WMS7";
+        grid-area: WM4;
+    }
+
+    .WMS2 {
+        grid-area: WMS2;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .WMS7 {
+        grid-area: WMS7;
     }
 
     .WQ1 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WQS1 VS WQS2";
         grid-area: WQ1;
     }
 
+    .WQS1 {
+        grid-area: WQS1;
+    }
+
+    .WQS2 {
+        grid-area: WQS2;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
     .WQ2 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WQS3 VS WQS4";
         grid-area: WQ2;
     }
 
-    .WQ3 {
-        grid-area: WQ3;
+    .WQS3 {
+        grid-area: WQS3;
     }
 
-    .WQ4 {
-        grid-area: WQ4;
+    .VS {
+        grid-area: VS;
     }
 
-    .WS1 {
-        grid-area: WS1;
+    .WQS4 {
+        grid-area: WQS4;
     }
 
-    .WS2 {
-        grid-area: WS2;
+    .WCF {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WCF1 VS WCF2";
+        grid-area: WCF;
     }
 
-    .NFW {
-        grid-area: NFW;
+    .WCF1 {
+        grid-area: WCF1;
     }
 
-    .NFE {
-        grid-area: NFE;
+    .VS {
+        grid-area: VS;
     }
 
-    .ES1 {
-        grid-area: ES1;
+    .WCF2 {
+        grid-area: WCF2;
     }
 
-    .ES2 {
-        grid-area: ES2;
+    .FINAL {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WFIN VS EFIN";
+        grid-area: FINAL;
+    }
+
+    .WFIN {
+        grid-area: WFIN;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .EFIN {
+        grid-area: EFIN;
+    }
+
+    .ECF {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "ECF1 VS ECF2";
+        grid-area: ECF;
+    }
+
+    .ECF1 {
+        grid-area: ECF1;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .ECF2 {
+        grid-area: ECF2;
     }
 
     .EQ1 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WQS1 VS WQS2";
         grid-area: EQ1;
     }
 
+    .WQS1 {
+        grid-area: WQS1;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .WQS2 {
+        grid-area: WQS2;
+    }
+
     .EQ2 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "WQS3 VS WQS4";
         grid-area: EQ2;
     }
 
-    .EQ3 {
-        grid-area: EQ3;
+    .WQS3 {
+        grid-area: WQS3;
     }
 
-    .EQ4 {
-        grid-area: EQ4;
+    .VS {
+        grid-area: VS;
     }
 
-    .E1 {
-        grid-area: E1;
+    .WQS4 {
+        grid-area: WQS4;
     }
 
-    .E8 {
-        grid-area: E8;
+    .EM1 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "EMS1 VS EMS8";
+        grid-area: EM1;
     }
 
-    .E4 {
-        grid-area: E4;
+    .EMS1 {
+        grid-area: EMS1;
     }
 
-    .E5 {
-        grid-area: E5;
+    .VS {
+        grid-area: VS;
     }
 
-    .E3 {
-        grid-area: E3;
+    .EMS8 {
+        grid-area: EMS8;
     }
 
-    .E6 {
-        grid-area: E6;
+    .EM2 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "EMS4 VS EMS5";
+        grid-area: EM2;
     }
 
-    .E2 {
-        grid-area: E2;
+    .EMS4 {
+        grid-area: EMS4;
     }
 
-    .E7 {
-        grid-area: E7;
+    .VS {
+        grid-area: VS;
+    }
+
+    .EMS5 {
+        grid-area: EMS5;
+    }
+
+    .EM3 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "EMS3 VS EMS6";
+        grid-area: EM3;
+    }
+
+    .EMS3 {
+        grid-area: EMS3;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .EMS6 {
+        grid-area: EMS6;
+    }
+
+    .EM4 {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "EMS2 VS EMS7";
+        grid-area: EM4;
+    }
+
+    .EMS2 {
+        grid-area: EMS2;
+    }
+
+    .VS {
+        grid-area: VS;
+    }
+
+    .EMS7 {
+        grid-area: EMS7;
     }
 </style>
 <head>
@@ -154,110 +359,152 @@
 <h1 align="center">
     Pick your NBA playoff bracket! Click on the team you think will win!
 </h1>
-
-
 <div class="grid-container">
-    <div class="W1">
-        <h1>
+    <div class="WEST">
+        <h1 align="center">
             WEST
         </h1>
-        <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/1LAL.svg">
-        <h3>VERSUS</h3>
+        <hr>
     </div>
-    <div class="W8">
-        <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/8POR.svg">
-    </div>
-    <div class="W4">
-        <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/4HOU.svg">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="W5">
-        <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/5OKC.svg">
-    </div>
-    <div class="W3">
-        <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/3DEN.svg">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="W6">
-        <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/6UTA.svg">
-    </div>
-    <div class="W2">
-        <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/2LAC.svg">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="W7">
-        <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/7DAL.svg">
-    </div>
-    <div class="WQ1"><img id="wq1" onclick="image(this,'ws1')" role="button" src="">
-        <h3>VERSUS</h3>
-
-    </div>
-    <div class="WQ2"><img id="wq2" onclick="image(this,'ws1')" role="button" src="">
-
-    </div>
-    <div class="WQ3"><img id="wq3" onclick="image(this,'ws2')" role="button" src="">
-        <h3>VERSUS</h3>
-
-    </div>
-    <div class="WQ4"><img id="wq4" onclick="image(this,'ws2')" role="button" src="">
-    </div>
-    <div class="WS1"><img id="ws1" onclick="image(this,'nfw')" role="button" src="">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="WS2"><img id="ws2" onclick="image(this,'nfw')" role="button" src="">
-    </div>
-    <div class="NFW"><img id="nfw" onclick="color('nfw')" role="button" src="">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="NFE"><img id="nfe" onclick="color('nfe')" role="button" src="">
-    </div>
-    <div class="ES1"><img id="es1" onclick="image(this,'nfe')" role="button" src="">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="ES2"><img id="es2" onclick="image(this,'nfe')" role="button" src="">
-    </div>
-    <div class="EQ1"><img id="eq1" onclick="image(this,'es1')" role="button" src="">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="EQ2"><img id="eq2" onclick="image(this,'es1')" role="button" src="">
-
-    </div>
-    <div class="EQ3"><img id="eq3" onclick="image(this,'es2')" role="button" src="">
-        <h3>VERSUS</h3>
-    </div>
-    <div class="EQ4"><img id="eq4" onclick="image(this,'es2')" role="button" src="">
-    </div>
-    <div class="E1">
-        <h1>
+    <div class="EAST">
+        <h1 align="center">
             EAST
         </h1>
-        <img onclick="image(this,'eq1')" role="button" src="assets/teams/east/1MIL.svg">
-        <h3>VERSUS</h3>
+        <hr>
     </div>
-    <div class="E8">
-        <img onclick="image(this,'eq1')" role="button" src="assets/teams/east/8ORL.svg">
+    <div class="WM1">
+        <div class="WMS1">
+            <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/1LAL.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WMS8">
+            <img onclick="image(this,'wq1')" role="button" src="assets/teams/west/8POR.svg">
+        </div>
     </div>
-    <div class="E4">
-        <img onclick="image(this,'eq2')" role="button" src="assets/teams/east/4IND.svg">
-        <h3>VERSUS</h3>
+    <div class="WM2">
+        <div class="WMS4">
+            <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/4HOU.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WMS5">
+            <img onclick="image(this,'wq2')" role="button" src="assets/teams/west/5OKC.svg">
+        </div>
     </div>
-    <div class="E5">
-        <img onclick="image(this,'eq2')" role="button" src="assets/teams/east/5MIA.svg">
-
+    <div class="WM3">
+        <div class="WMS3">
+            <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/3DEN.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WMS6">
+            <img onclick="image(this,'wq3')" role="button" src="assets/teams/west/6UTA.svg">
+        </div>
     </div>
-    <div class="E3">
-        <img onclick="image(this,'eq3')" role="button" src="assets/teams/east/3BOS.svg">
-        <h3>VERSUS</h3>
+    <div class="WM4">
+        <div class="WMS2">
+            <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/2LAC.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WMS7">
+            <img onclick="image(this,'wq4')" role="button" src="assets/teams/west/7DAL.svg">
+        </div>
     </div>
-    <div class="E6">
-        <img onclick="image(this,'eq3')" role="button" src="assets/teams/east/6PHI.svg">
+    <div class="WQ1">
+        <div class="WQS1">
+            <img id="wq1" onclick="image(this,'ws1')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WQS2">
+            <img id="wq2" onclick="image(this,'ws1')" role="button" src="">
+        </div>
     </div>
-    <div class="E2">
-        <img onclick="image(this,'eq4')" role="button" src="assets/teams/east/2TOR.svg">
-        <h3>VERSUS</h3>
+    <div class="WQ2">
+        <div class="WQS3">
+            <img id="wq3" onclick="image(this,'ws2')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WQS4">
+            <img id="wq4" onclick="image(this,'ws2')" role="button" src="">
+        </div>
     </div>
-    <div class="E7">
-        <img onclick="image(this,'eq4')" role="button" src="assets/teams/east/7BKN.svg">
+    <div class="WCF">
+        <div class="WCF1">
+            <img id="ws1" onclick="image(this,'nfw')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WCF2">
+            <img id="ws2" onclick="image(this,'nfw')" role="button" src="">
+        </div>
+    </div>
+    <div class="FINAL">
+        <div class="WFIN">
+            <img id="nfw" onclick="color('nfw')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="EFIN">
+            <img id="nfe" onclick="color('nfe')" role="button" src="">
+        </div>
+    </div>
+    <div class="ECF">
+        <div class="ECF1">
+            <img id="es1" onclick="image(this,'nfe')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="ECF2">
+            <img id="es2" onclick="image(this,'nfe')" role="button" src="">
+        </div>
+    </div>
+    <div class="EQ1">
+        <div class="WQS1">
+            <img id="eq1" onclick="image(this,'es1')" role="button" src="">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="WQS2">
+            <img id="eq2" onclick="image(this,'es1')" role="button" src="">
+        </div>
+    </div>
+    <div class="EQ2">
+        <div class="WQS3">
+            <img id="eq3" onclick="image(this,'es2')" role="button" src=""></div>
+        <div class="VS">VS.</div>
+        <div class="WQS4">
+            <img id="eq4" onclick="image(this,'es2')" role="button" src="">
+        </div>
+    </div>
+    <div class="EM1">
+        <div class="EMS1">
+            <img alt="Milwaukee" onclick="image(this,'eq1')" role="button" src="assets/teams/east/1MIL.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="EMS8">
+            <img alt="Orlando" onclick="image(this,'eq1')" role="button" src="assets/teams/east/8ORL.svg">
+        </div>
+    </div>
+    <div class="EM2">
+        <div class="EMS4">
+            <img alt="Indiana" onclick="image(this,'eq2')" role="button" src="assets/teams/east/4IND.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="EMS5">
+            <img alt="Miami" onclick="image(this,'eq2')" role="button" src="assets/teams/east/5MIA.svg">
+        </div>
+    </div>
+    <div class="EM3">
+        <div class="EMS3">
+            <img alt="Boston" onclick="image(this,'eq3')" role="button" src="assets/teams/east/3BOS.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="EMS6">
+            <img alt="Philadelphia" onclick="image(this,'eq3')" role="button" src="assets/teams/east/6PHI.svg">
+        </div>
+    </div>
+    <div class="EM4">
+        <div class="EMS2">
+            <img alt="Toronto" onclick="image(this,'eq4')" role="button" src="assets/teams/east/2TOR.svg">
+        </div>
+        <div class="VS">VS.</div>
+        <div class="EMS7">
+            <img alt="Brooklyn" onclick="image(this,'eq4')" role="button" src="assets/teams/east/7BKN.svg">
+        </div>
     </div>
 </div>
 
