@@ -13,23 +13,9 @@ function color(location) {
 }
 
 function reset() {
-
-
-    document.getElementById('eq1').src = ""
-    document.getElementById('eq2').src = ""
-    document.getElementById('eq3').src = ""
-    document.getElementById('eq4').src = ""
-    document.getElementById('es1').src = ""
-    document.getElementById('es2').src = ""
-
-    document.getElementById('wq1').src = ""
-    document.getElementById('wq2').src = ""
-    document.getElementById('wq3').src = ""
-    document.getElementById('wq4').src = ""
-    document.getElementById('ws1').src = ""
-    document.getElementById('ws2').src = ""
-
-    document.getElementById('nfe').src = ""
-    document.getElementById('nfw').src = ""
-
+    const ids = ['eq1', 'eq2', 'eq3', 'eq4', 'es1', 'es2', 'wq1', 'wq2', 'wq3', 'wq4', 'ws1', 'ws2', 'nfe', 'nfw']
+    ids.forEach(
+        id => {document.getElementById(id).src = ""
+        }
+    )
 }
