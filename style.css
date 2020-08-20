@@ -8,6 +8,8 @@
     gap: 1px 1px;
     align-items: center;
     grid-template-areas: "WEST WEST WEST . EAST EAST EAST" "WM1 . . . . . EM1" ". WQ1 . . . EQ1 ." "WM2 . WCF FINAL ECF . EM2" ". . WCF FINAL ECF . ." "WM3 . WCF FINAL ECF . EM3" ". WQ2 . . . EQ2 ." "WM4 . . . . . EM4";
+    width: 100%;
+    height: auto;
 }
 
 .WEST {
