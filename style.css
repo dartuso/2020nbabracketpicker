@@ -294,3 +294,12 @@
 .EMS7 {
     grid-area: EMS7;
 }
+.reset{
+    background-color: red;
+    padding: 3% 5%;
+    text-align: center;
+    font-size: 16px;
+    cursor: crosshair;
+    margin: auto;
+    display: block;
+}
