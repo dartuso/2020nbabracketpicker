@@ -15,307 +15,10 @@
         }
     }
 </script>
-<style>
-    /*
-        https://grid.layoutit.com/?id=beHcdH0
-    */
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        gap: 1px 1px;
-        align-items: center;
-        grid-template-areas: "WEST WEST WEST . EAST EAST EAST" "WM1 . . . . . EM1" ". WQ1 . . . EQ1 ." "WM2 . WCF FINAL ECF . EM2" ". . WCF FINAL ECF . ." "WM3 . WCF FINAL ECF . EM3" ". WQ2 . . . EQ2 ." "WM4 . . . . . EM4";
-    }
-
-    .WEST {
-        grid-area: WEST;
-    }
-
-    .EAST {
-        grid-area: EAST;
-    }
-
-    .WM1 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WMS1 VS WMS8";
-        grid-area: WM1;
-        border-right: dashed;
-    }
-
-    .WMS1 {
-        grid-area: WMS1;
-    }
-
-    .WMS8 {
-        grid-area: WMS8;
-    }
-
-    .VS {
-        grid-area: VS;
-        align-self: flex-end;
-        font-weight: bold;
-    }
-
-    .WM2 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WMS4 VS WMS5";
-        grid-area: WM2;
-        border-right: dashed;
-    }
-
-    .WMS4 {
-        grid-area: WMS4;
-    }
-
-    .WMS5 {
-        grid-area: WMS5;
-    }
-
-
-    .WM3 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WMS3 VS WMS6";
-        grid-area: WM3;
-        border-right: dashed;
-    }
-
-    .WMS3 {
-        grid-area: WMS3;
-    }
-
-    .WMS6 {
-        grid-area: WMS6;
-    }
-
-    .WM4 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WMS2 VS WMS7";
-        grid-area: WM4;
-        border-right: dashed;
-    }
-
-    .WMS2 {
-        grid-area: WMS2;
-    }
-
-    .WMS7 {
-        grid-area: WMS7;
-    }
-
-    .WQ1 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WQS1 VS WQS2";
-        grid-area: WQ1;
-        border-right: dashed;
-    }
-
-    .WQS1 {
-        grid-area: WQS1;
-    }
-
-    .WQS2 {
-        grid-area: WQS2;
-    }
-
-    .WQ2 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WQS3 VS WQS4";
-        grid-area: WQ2;
-        border-right: dashed;
-    }
-
-    .WQS3 {
-        grid-area: WQS3;
-    }
-
-    .WQS4 {
-        grid-area: WQS4;
-    }
-
-    .WCF {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WCF1 VS WCF2";
-        grid-area: WCF;
-        border-right: dashed;
-    }
-
-    .WCF1 {
-        grid-area: WCF1;
-    }
-
-    .WCF2 {
-        grid-area: WCF2;
-    }
-
-    .FINAL {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 0 0;
-        grid-template-areas: "WFIN VS EFIN";
-        grid-area: FINAL;
-        border: double;
-    }
-
-    .WestFinal {
-        grid-area: WFIN;
-    }
-
-    .EastFinal {
-        grid-area: EFIN;
-    }
-
-    .ECF {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "ECF1 VS ECF2";
-        grid-area: ECF;
-        border-left: dashed;
-    }
-
-    .ECF1 {
-        grid-area: ECF1;
-    }
-
-    .ECF2 {
-        grid-area: ECF2;
-    }
-
-    .EQ1 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WQS1 VS WQS2";
-        grid-area: EQ1;
-        border-left: dashed;
-    }
-
-    .WQS1 {
-        grid-area: WQS1;
-    }
-
-    .WQS2 {
-        grid-area: WQS2;
-    }
-
-    .EQ2 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "WQS3 VS WQS4";
-        grid-area: EQ2;
-        border-left: dashed;
-    }
-
-    .WQS3 {
-        grid-area: WQS3;
-    }
-
-    .WQS4 {
-        grid-area: WQS4;
-    }
-
-    .EM1 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "EMS1 VS EMS8";
-        grid-area: EM1;
-        border-left: dashed;
-    }
-
-    .EMS1 {
-        grid-area: EMS1;
-    }
-
-    .EMS8 {
-        grid-area: EMS8;
-    }
-
-    .EM2 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "EMS4 VS EMS5";
-        grid-area: EM2;
-        border-left: dashed;
-    }
-
-    .EMS4 {
-        grid-area: EMS4;
-    }
-
-    .EMS5 {
-        grid-area: EMS5;
-    }
-
-    .EM3 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "EMS3 VS EMS6";
-        grid-area: EM3;
-        border-left: dashed;
-    }
-
-    .EMS3 {
-        grid-area: EMS3;
-    }
-
-    .EMS6 {
-        grid-area: EMS6;
-    }
-
-    .EM4 {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-template-rows: 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "EMS2 VS EMS7";
-        grid-area: EM4;
-        border-left: dashed;
-    }
-
-    .EMS2 {
-        grid-area: EMS2;
-    }
-
-    .EMS7 {
-        grid-area: EMS7;
-    }
-</style>
 <head>
     <meta charset="UTF-8">
     <title>NBA Bracket</title>
+    <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 <h1 style="text-align:center">
@@ -372,65 +75,65 @@
     </div>
     <div class="WQ1">
         <div class="WQS1">
-            <img alt="WesternQuarter1" id="wq1" onclick="image(this,'ws1')" role="button" src="">
+            <img alt="" id="wq1" onclick="image(this,'ws1')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="WQS2">
-            <img alt="WesternQuarter2" id="wq2" onclick="image(this,'ws1')" role="button" src="">
+            <img alt="" id="wq2" onclick="image(this,'ws1')" role="button" src="">
         </div>
     </div>
     <div class="WQ2">
         <div class="WQS3">
-            <img alt="WesternQuarter3" id="wq3" onclick="image(this,'ws2')" role="button" src="">
+            <img alt="" id="wq3" onclick="image(this,'ws2')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="WQS4">
-            <img alt="WesternQuarter4" id="wq4" onclick="image(this,'ws2')" role="button" src="">
+            <img alt="" id="wq4" onclick="image(this,'ws2')" role="button" src="">
         </div>
     </div>
     <div class="WCF">
         <div class="WCF1">
-            <img alt="WesternSemi1" id="ws1" onclick="image(this,'nfw')" role="button" src="">
+            <img alt="" id="ws1" onclick="image(this,'nfw')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="WCF2">
-            <img alt="WesternSemi1" id="ws2" onclick="image(this,'nfw')" role="button" src="">
+            <img alt="" id="ws2" onclick="image(this,'nfw')" role="button" src="">
         </div>
     </div>
     <div class="FINAL">
         <div class="WestFinal">
-            <img alt="WesternFinalist" id="nfw" onclick="color('nfw')" role="button" src="">
+            <img alt="" id="nfw" onclick="color('nfw')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="EastFinal">
-            <img alt="EasternFinalist" id="nfe" onclick="color('nfe')" role="button" src="">
+            <img alt="" id="nfe" onclick="color('nfe')" role="button" src="">
         </div>
     </div>
     <div class="ECF">
         <div class="ECF1">
-            <img alt="EasternSemi1" id="es1" onclick="image(this,'nfe')" role="button" src="">
+            <img alt="" id="es1" onclick="image(this,'nfe')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="ECF2">
-            <img alt="EasternSemi2" id="es2" onclick="image(this,'nfe')" role="button" src="">
+            <img alt="" id="es2" onclick="image(this,'nfe')" role="button" src="">
         </div>
     </div>
     <div class="EQ1">
         <div class="WQS1">
-            <img alt="WesternQuarter1" id="eq1" onclick="image(this,'es1')" role="button" src="">
+            <img alt="" id="eq1" onclick="image(this,'es1')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="WQS2">
-            <img alt="WesternQuarter2" id="eq2" onclick="image(this,'es1')" role="button" src="">
+            <img alt="" id="eq2" onclick="image(this,'es1')" role="button" src="">
         </div>
     </div>
     <div class="EQ2">
         <div class="WQS3">
-            <img alt="WesternQuarter3" id="eq3" onclick="image(this,'es2')" role="button" src="">
+            <img alt="" id="eq3" onclick="image(this,'es2')" role="button" src="">
         </div>
         <div class="VS">VS.</div>
         <div class="WQS4">
-            <img alt="WesternQuarter4" id="eq4" onclick="image(this,'es2')" role="button" src="">
+            <img alt="" id="eq4" onclick="image(this,'es2')" role="button" src="">
         </div>
     </div>
     <div class="EM1">
