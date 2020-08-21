@@ -122,31 +122,37 @@ function image(img, location) {
         case 'eq4':
             if (forward.src === ES2) {
                 document.getElementById('es2').src = "";
-
+                document.getElementById('es2').alt = "";
             }
         case 'es2':
             if (forward.src === NFE) {
                 document.getElementById('nfe').src = "";
+                document.getElementById('nfe').alt = "";
             }
             break;
         case 'wq1':
         case 'wq2':
             if (forward.src === WS1) {
                 document.getElementById('ws1').src = "";
+                document.getElementById('ws1').alt = "";
             }
         case 'ws1':
             if (forward.src === NFW) {
                 document.getElementById('nfw').src = "";
+                document.getElementById('nfw').alt = "";
             }
             break;
         case 'wq3':
         case 'wq4':
             if (forward.src === WS2) {
                 document.getElementById('ws2').src = "";
+                document.getElementById('ws2').alt = "";
+
             }
         case 'ws2':
             if (forward.src === NFW) {
                 document.getElementById('nfw').src = "";
+                document.getElementById('nfw').alt = "";
             }
             break;
         default:
