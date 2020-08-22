@@ -4,6 +4,12 @@ html{
 
 body{
     height: 100%;
+
+}
+
+.winner{
+    background-image: radial-gradient(white,#ffd700);
+    border-radius: 100%;
 }
 
 /*
@@ -18,35 +24,45 @@ body{
     grid-template-areas: "WEST WEST WEST . EAST EAST EAST" "WM1 . . . . . EM1" ". WQ1 . . . EQ1 ." "WM2 . WCF FINAL ECF . EM2" ". . WCF FINAL ECF . ." "WM3 . WCF FINAL ECF . EM3" ". WQ2 . . . EQ2 ." "WM4 . . . . . EM4";
     width: 100%;
     height: 75%;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(247,87,87,1) 20%, rgba(233,128,155,1) 35%, rgba(229,228,172,0.25252099130667893) 50%, rgba(168,152,212,1) 67%, rgba(94,94,245,1) 80%, rgba(3,0,255,1) 100%);     border-radius: 25px;
 }
 
 .reset{
     background-color: red;
     text-align: center;
     font-size: 100%;
+    font-weight: bolder;
     cursor: crosshair;
     margin: auto;
     display: block;
     height: 5%;
+    border-radius: 25px;
 }
 .Title{
+    font-family: Calibri, sans-serif;
     text-align: center;
-    font-size: 100%;
     font-weight: bold;
+    font-size: x-large;
+    background-color: #efeffa;
+    border-radius: 25px;
 }
 
 .WEST {
+    font-family: Calibri, sans-serif;
     grid-area: WEST;
     text-align: left;
     font-size: 100%;
     font-weight: bold;
+    padding: 1%;
 }
 
 .EAST {
+    font-family: Calibri, sans-serif;
     grid-area: EAST;
     text-align: right;
     font-size: 100%;
     font-weight: bold;
+    padding: 1%;
 }
 
 .WM1 {
@@ -57,6 +73,7 @@ body{
     grid-template-areas: "WMS1 VS WMS8";
     grid-area: WM1;
     border-right: dashed;
+    padding: 5%;
 }
 
 .WMS1 {
@@ -190,6 +207,7 @@ body{
     grid-template-areas: "WFIN VS EFIN";
     grid-area: FINAL;
     border: double;
+    padding: 8%;
 }
 
 .WestFinal {
@@ -262,6 +280,7 @@ body{
     grid-template-areas: "EMS1 VS EMS8";
     grid-area: EM1;
     border-left: dashed;
+    padding: 5%;
 }
 
 .EMS1 {

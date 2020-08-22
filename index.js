@@ -165,11 +165,11 @@ function image(img, location) {
 
 function winner(location) {
     if (location === 'nfw') {
-        document.getElementById('nfw').style.backgroundColor = "#ffd700"
-        document.getElementById('nfe').style.backgroundColor = ""
+        document.getElementById('nfw').className = "winner"
+        document.getElementById('nfe').className = ""
     } else {
-        document.getElementById('nfe').style.backgroundColor = "#ffd700"
-        document.getElementById('nfw').style.backgroundColor = ""
+        document.getElementById('nfe').className = "winner"
+        document.getElementById('nfw').className = ""
     }
     loadBracket(location)
 }
